@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 l#include<unistd.h>
+=======
+#include<unistd.h>
+>>>>>>> 4a85df1c20a5ffad6ddc197eca9a994508e7fee9
 
 /**
- * main - Entry point
+ * main - Entry point 
  *
+<<<<<<< HEAD
  * Return: Always 1 ((Success)
+=======
+ * Return: Always 1 (Success)
+>>>>>>> 4a85df1c20a5ffad6ddc197eca9a994508e7fee9
  */
 int main(void)
 {
