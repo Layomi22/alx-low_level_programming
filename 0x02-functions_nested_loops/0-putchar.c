@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - check my description
- * description: To print _putchar followed by a new line by titilayomi
+ * description: To prn _putchar followed by a new line by titilayomi
  * Return: always 0
  */
 
