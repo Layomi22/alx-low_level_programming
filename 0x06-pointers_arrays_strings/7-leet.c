@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *leet - check the code for Holberton School students.
+ *_leet - check the code.
  *
  * @str: string.
  * Return: string.
