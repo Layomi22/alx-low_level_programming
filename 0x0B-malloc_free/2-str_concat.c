@@ -1,59 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
- * _str_concat - concatenates two strings.
- *
- * @s1: first string.
- * @s2: second string.
- * Return: Always 0.
+ * str_concat - A function that concatenates two strings
+ * @s1: An input pointer of the first string
+ * @s2: An input pointer of the second string
+ * Return: Apointer to concatened strings or NULL if it str is NULL
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, n;
-	char *new_str;
+	char *new_str, *starts1, *starts2;
+	int i = 0, lens1 = 0, lens2 = 0;
 
+	starts1 = s1;
+	starts2 = s2;
 	if (s1 == NULL)
 		s1 = "";
+	while (*s1)
+	{
+		lens1++;
+		s1++;
+	}
+	s1 = starts1;
 	if (s2 == NULL)
 		s2 = "";
-	n = string_length(s1) + string_length(s2) + 1;
-	new_str = malloc(sizeof(char) * n);
-	/* check if null is passed */
+	while (*s2)
+	{
+		lens2++;
+		s2++;
+	}
+	s2 = starts2;
+	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	starts1 = new_str;
 	if (new_str == NULL)
 		return (NULL);
-	/* insert s1 into the new string */
-	while (s1[i] != '\0')
+	for (; i < (lens1 + lens2); i++)
 	{
-		new_str[j] = s1[i];
-		i++;
-		j++;
+		if (i < lens1)
+		{
+			new_str[i] = *s1;
+			s1++;
+		}
+		else
+		{
+			new_str[i] = *s2;
+			s2++;
+		}
 	}
-	/* insert s2 into the new string */
-	i = 0;
-	while (s2[i] != '\0')
-	{
-		new_str[j] = s2[i];
-		i++;
-		j++;
-	}
-	new_str[j] = '\0';
-	return (new_str);
+	new_str[i] = '\0';
+	return (starts1);
 }
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
-}
-
