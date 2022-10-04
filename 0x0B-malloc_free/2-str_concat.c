@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * *str_concat - concatenates two strings.
+ * _str_concat - concatenates two strings.
  *
  * @s1: first string.
  * @s2: second string.
@@ -56,3 +56,4 @@ int string_length(char *pointer)
 	}
 	return (c);
 }
+
