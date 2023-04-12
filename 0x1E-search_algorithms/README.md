@@ -49,12 +49,3 @@ n square -> O(n^2)
 sqrt n -> O(sqrt(n))
 log(n) -> O(log(n))
 n * log(n) -> O(nlog(n))
-…
-Tasks
-0. Linear search
-mandatory
-Write a function that searches for a value in an array of integers using the Linear search algorithm
-
-Prototype : int linear_search(int *array, size_t size, int value);
-Where array is a pointer to the first element of the array to search in
-size is the number of elements in array
